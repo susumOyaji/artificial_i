@@ -7,9 +7,14 @@ buildscript {
 
     dependencies {
         classpath 'com.android.tools.build:gradle:4.1.0'
+        //classpath 'com.android.tools.build:gradle:4.2.2'
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
     }
+
 }
+
+
+
 
 allprojects {
     repositories {
@@ -26,6 +31,14 @@ subprojects {
     project.evaluationDependsOn(':app')
 }
 
+
+
+apply plugin: 'com.android.application' version '7.0.4' apply false
+apply plugin: 'org.jetbrains.kotlin.android' version '1.5.20' apply false
+apply plugin: 'com.chaquo.python' version '11.0.0' apply false
+
 task clean(type: Delete) {
     delete rootProject.buildDir
 }
+
+
